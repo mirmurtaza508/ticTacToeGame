@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="homeScreen">
+        <div>
+          <h2>O</h2>
+          <input
+            type="text"
+            placeholder="username O"
+            id="userO"
+            class="userName"
+          />
+        </div>
+        <div>
+          <h2>X</h2>
+          <input
+            type="text"
+            placeholder="username X"
+            id="userX"
+            class="userName"
+          />
+        </div>
+      </div>
+      <a id="start-btn" href="#game-container">START</a>
+      <a href="#game-container" style="display: none;" id="navBtn1"></a>
+    </div>
+    <div class="game-container" id="game-container">
+      <div id="my-intro">
+      </div>
+      <div class="ground-container" style="position: relative;">
+        <button class="game-btns"></button>
+        <button class="game-btns"></button>
+        <button class="game-btns"></button>
+        <button class="game-btns"></button>
+        <button class="game-btns"></button>
+        <button class="game-btns"></button>
+        <button class="game-btns"></button>
+        <button class="game-btns"></button>
+        <button class="game-btns"></button>
+        <div class="line" id="line" ></div>
+      </div>
+      <div style="padding: 0 2rem;">
+        <h2 id="userO">name O user :- <span id="usernameO"></span><br><span id="scoreO">scoreO :- 0</span></h2>
+      <h2 id="userX">name X user :- <span id="usernameX"></span><br><span id="scoreX">scoreX :- 0</span></h2>
+      </div>
+      <a href="#winner-container" id="navigateBtn" style="display: none;"></a>
+      <!-- <p>section win match</p> -->
+       <!-- pending -->
+      <!-- <p>section draw match</p> -->
+       <div class="draw-container" id="draw-container">
+        <h1>draw match</h1>
+        <div style="margin-top: 1rem;">
+          <a id="resetTwo" class="lastBtns"  href="#game-container">Reset</a>
+          <a id="start-new" class="lastBtns" href="#container" >new game</a>
+        </div>
+       </div>
+    </div>
+    <div class="winner-container" id="winner-container">
+      <h1 id="winner-choice"></h1>
+      <h2 id="winner-name"></h2>
+      <div style="height: 5rem;margin-top: 3rem;">
+        <a id="reset" class="lastBtns" href="#game-container">Reset</a>
+        <a id="start-new" class="lastBtns" href="#container" >new game</a>
+      </div>
+    </div>
+    <script src="script.js">
+    </script>
+  </body>
+</html>
