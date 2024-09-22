@@ -29,7 +29,9 @@ startBtn.addEventListener("click", (e) => {
     countMarquee++;
     const marquee = countMarquee >= 2 ? "" : document.createElement("marquee");
     const heading = countMarquee >= 2 ? "" : document.createElement("h1");
-    heading.innerText = "designed by ❤️ mir murtaza bashir";
+    countMarquee >= 2
+      ? ""
+      : (heading.innerText = "designed by ❤️ mir murtaza bashir");
     // marquee.behavior = "scroll";
     countMarquee >= 2 ? "" : marquee.appendChild(heading);
     countMarquee >= 2 ? "" : myIntro.appendChild(marquee);
