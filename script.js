@@ -29,13 +29,10 @@ startBtn.addEventListener("click", (e) => {
     countMarquee++;
     const marquee = countMarquee >= 2 ? "" : document.createElement("marquee");
     const heading = countMarquee >= 2 ? "" : document.createElement("h1");
-    countMarquee >= 2
-      ? ""
-      : (heading.innerText = "designed by ❤️ mir murtaza bashir");
+    heading.innerText = "designed by ❤️ mir murtaza bashir";
     // marquee.behavior = "scroll";
     countMarquee >= 2 ? "" : marquee.appendChild(heading);
     countMarquee >= 2 ? "" : myIntro.appendChild(marquee);
-    // console.log(inputUserO.value)
     homeContainer.style.display = "none";
     gameContainer.style.display = "flex";
     userO.innerText = inputUserO.value;
@@ -87,9 +84,6 @@ const checkWinner = () => {
 
     if (pos1 !== "" && pos2 !== "" && pos3 !== "") {
       if (pos1 === pos2 && pos2 === pos3) {
-        // winContainer.style.display = 'flex'
-        // homeContainer.style.display = 'none'
-        // gameContainer.style.display = 'none'
         navBtn.click();
         isWinner = true;
         gameBtns.forEach((eachBtn) => {
@@ -112,22 +106,7 @@ const checkWinner = () => {
     }
   }
 };
-
-// resetBtn.addEventListener("click",(e)=>{
-//   // homeContainer.style.display = 'flex'
-//   // winContainer.style.display = 'none'
-//   drawContainer.style.transform = "scale(0)"
-//   gameBtns.forEach((eachBtn)=>{
-//     turnO = true
-//     eachBtn.disabled = false;
-//     eachBtn.innerText= "";
-//      winnerName.innerText = "";
-//      winnerChoice.innerText = "";
-//   })
-// })
 const resetFunc = (e) => {
-  // homeContainer.style.display = 'flex'
-  // winContainer.style.display = 'none'
   line.style.top = 0;
   line.style.left = 0;
   moveCount = 0;
@@ -178,40 +157,6 @@ const drawFunc = (count) => {
     moveCount = 0;
   }
 };
-// const drawLine = (pattern) => {
-//   const positions = [
-//     { top: "0%", left: "0%" }, // 0 (top-left)
-//     { top: "0%", left: "33.33%" }, // 1 (top-center)
-//     { top: "0%", left: "66.66%" }, // 2 (top-right)
-//     { top: "33.33%", left: "0%" }, // 3 (middle-left)
-//     { top: "33.33%", left: "33.33%" }, // 4 (middle-center)
-//     { top: "33.33%", left: "66.66%" }, // 5 (middle-right)
-//     { top: "66.66%", left: "0%" }, // 6 (bottom-left)
-//     { top: "66.66%", left: "33.33%" }, // 7 (bottom-center)
-//     { top: "66.66%", left: "66.66%" }, // 8 (bottom-right)
-//   ];
-
-//   const posStart = positions[pattern[0]];
-//   const posEnd = positions[pattern[2]];
-
-//   const startX = parseFloat(posStart.left);
-//   const startY = parseFloat(posStart.top);
-//   const endX = parseFloat(posEnd.left);
-//   const endY = parseFloat(posEnd.top);
-
-//   // Calculate distance and angle
-//   const deltaX = endX - startX;
-//   const deltaY = endY - startY;
-//   const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
-//   const angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI);
-
-//   // Set line width and position
-//   console.log(distance);
-//   line.style.width = `calc(${distance}% + 120px)`;
-//   line.style.top = `calc(${startY} + 50px)`; // Adjust the top based on button height
-//   line.style.left = `calc(${startX} + 50px)`; // Adjust the left based on button width
-//   line.style.transform = `rotate(${angle}deg)`;
-// };
 const drawLine = (pattern) => {
   console.log(pattern);
   pattern[0] === 0

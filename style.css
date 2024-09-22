@@ -14,14 +14,12 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* display: none; */
   }
   .homeScreen {
     display: flex;
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
-    /* flex-direction: column; */
   }
   .homeScreen div {
     max-height: 15rem;
@@ -95,31 +93,18 @@ html {
     background: lightsalmon;
     opacity: 0.8;
   }
-  /* .winner-container {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: lightseagreen;
-    display: none;
-  } */
    .winner-container{
     height: 15rem;
   max-width: 30rem;
   padding: 3rem 4rem;
   background: rgb(106, 223, 139);
   position: absolute;
-  /* top: 50%;
-  left: 50%; */
-  /* transform: translate(-50%,-50%); */
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   transform: scale(0);
   transition: all 500ms linear;
-  /* animation: animate 1s linear infinite; */
    }
    .win-container #winner-choice{
     color: black;
@@ -147,29 +132,13 @@ html {
     padding: 2rem 4rem;
     background: burlywood;
     position: absolute;
-    /* top: 50%;
-    left: 50%; */
-    /* transform: translate(-50%,-50%); */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     transform: scale(0);
     transition: all 500ms linear;
-    /* animation: animate 1s linear infinite; */
   }
-  /* @keyframes animate {
-    0%{
-      .draw-container{
-        transform: scale(0);
-      }
-    }
-    100%{
-        .draw-container{
-          transform: scale(1);
-        }
-      }
-  } */
   .draw-container h1{
     text-align: center;
     font-size: 3rem;
@@ -177,11 +146,9 @@ html {
   }
   .line{
   position: absolute;
-  /* width: 200px; */
   height: 10px;
   background-color: red;
   transition: all 0.5s ease;
-  /* transform: rotate(90deg); */
  }
  #my-intro{
   height: 3rem;
