@@ -23,15 +23,20 @@ let moveCount = 0;
 let isWinner = false;
 let scoreO = 0;
 let scoreX = 0;
+let countMarquee = 0;
 startBtn.addEventListener("click", (e) => {
   if (inputUserO.value && inputUserX.value) {
-    const marquee = document.createElement("marquee");
-    const heading = document.createElement("h1");
-    heading.innerText = "designed by ❤️ mir murtaza bashir";
+    countMarquee++;
+    const marquee = countMarquee >= 2 ? "" : document.createElement("marquee");
+    const heading = countMarquee >= 2 ? "" : document.createElement("h1");
+    countMarquee >= 2
+      ? ""
+      : (heading.innerText = "designed by ❤️ mir murtaza bashir");
     // marquee.behavior = "scroll";
-    marquee.appendChild(heading);
-    myIntro.appendChild(marquee);
+    countMarquee >= 2 ? "" : marquee.appendChild(heading);
+    countMarquee >= 2 ? "" : myIntro.appendChild(marquee);
     // console.log(inputUserO.value)
+    homeContainer.style.display = "none";
     gameContainer.style.display = "flex";
     userO.innerText = inputUserO.value;
     userX.innerText = inputUserX.value;
@@ -90,7 +95,7 @@ const checkWinner = () => {
         gameBtns.forEach((eachBtn) => {
           eachBtn.disabled = true;
         });
-        winContainer.style.display = "flex";
+        winContainer.style.transform = "scale(1)";
         winnerChoice.innerText = `${pos1} is Winner`;
         if (pos1 === "O") {
           winnerName.innerText = `${userO.innerText} you win the match`;
@@ -129,6 +134,7 @@ const resetFunc = (e) => {
   line.style.width = "0";
   isWinner = false;
   drawContainer.style.transform = "scale(0)";
+  winContainer.style.transform = "scale(0)";
   gameBtns.forEach((eachBtn) => {
     turnO = true;
     eachBtn.disabled = false;
@@ -152,8 +158,9 @@ newGameStartBtn.forEach((btn) => {
     line.style.width = "0";
     userO.innerText = "";
     userX.innerText = "";
+    homeContainer.style.display = "flex";
     drawContainer.style.transform = "scale(0)";
-    winContainer.style.display = "none";
+    winContainer.style.transform = "scale(0)";
     gameContainer.style.display = "none";
     gameBtns.forEach((eachBtn) => {
       turnO = true;
